@@ -237,7 +237,7 @@ Usando desigualdad de Jensen y lema de Doob:
 
 \begin{frame}{Definición Formal de una GAN}\vspace{-7mm}
 \begin{center}
-    Dado el teorema, podemos definir: $C(\mu_G) := V(\mu_G, \mu_{D}^*) = \text{JS}(\mu, \mu_G) - 2 \ln 2$
+    Dado el teorema, podemos definir: $C(\mu_G) := V(\mu_G, \mu_{D}^*) = \text{JS}(\pi, \mu_G) - 2 \ln 2$
 \end{center}
 \pause
 \begin{theorem}[Generador Óptimo]
@@ -662,7 +662,7 @@ El mínimo global de la función $C(\mu_{G})$ se alcanza en $\mu_{G}^{*}=\pi$, y
             \begin{itemize}
                 \item Encontrado por primera vez en \cite{Anderson1982}; \cite{HaussmannPardoux1986}.
                 \item La fórmula de reversión temporal es válida para \textbf{difusiones más complicadas}.
-                \item La fórmula anterior es válida en un \textbf{marco abstracto} \cite{Cattiaux2021}.
+                \item La fórmula anterior es válida en un \textbf{marco abstracto} (\cite{Cattiaux2021}).
             \end{itemize}
         \end{itemize}
     \end{frame}
@@ -747,7 +747,7 @@ El mínimo global de la función $C(\mu_{G})$ se alcanza en $\mu_{G}^{*}=\pi$, y
     % ====================
     \begin{frame}{Trucos para implementar DDM en la práctica}\vspace{-6mm}
     \begin{center}
-        Originalmente, estos modelos eran \textbf{difíciles} de entrenar \citet{SongErmon2019}, ver también este \href{https://yang-song.github.io/blog/2021/score/}{blogpost}. 
+        Originalmente, estos modelos eran \textbf{difíciles} de entrenar (\citet{SongErmon2019}), ver también este \href{https://yang-song.github.io/blog/2021/score/}{blogpost}. 
     \end{center}
     \pause
     \begin{center}
