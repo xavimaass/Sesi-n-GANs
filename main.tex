@@ -148,6 +148,14 @@
 %------------------------------------------------
 \makesection{Generative Adversarial Networks (GANs)}
 
+\begin{frame}{Redes Generativas Adversarias (GANs)}
+    \begin{center}
+        Las slides de esta sección están fuertemente basadas en la sección de GANs del trabajo de tesis de Francisco Muñoz (\cite{MunozLopez2024}).
+
+        Si bien me tocó adaptar el material, los créditos de la autoría y las fuentes recabadas son para él.
+    \end{center}
+\end{frame}
+
 % Introducción
 \begin{frame}{Introducción a GANs}
     \begin{itemize}
@@ -160,6 +168,8 @@
             \pause
             \item \textbf{Discriminador (D)}: Aprende a distinguir entre datos reales y generados.
         \end{itemize}
+        \pause
+        \item Esta arquitectura fue propuesta inicialmente por \citet{Goodfellow2014}; y ha sido objeto de estudio extensivo desde entonces (\citet{Arjovsky2017}; \citet{Gulrajani2017}; \citet{Heusel2017}; \citet{Salimans2016}; \citet{Zhu2017}; \citet{Wang2018}; \citet{Xiao2021}; entre muchos otros).
     \end{itemize}
 \end{frame}
 
@@ -302,6 +312,9 @@ El mínimo global de la función $C(\mu_{G})$ se alcanza en $\mu_{G}^{*}=\pi$, y
 
     \begin{center}
         Utilizaremos las slides del curso de Generative Modelling de Valentin DeBortoli (\href{https://vdeborto.github.io/project/generative_modeling/}{link})... 
+
+        \pause
+        TODAS las slides que vienen a partir de este punto son simplemente una traducción casi verbatim de las slides hechas por Valentin, por lo que no me hago creer el autor de ellas bajo ninguna circunstancia.
     \end{center}
     
 \end{frame}
@@ -824,208 +837,250 @@ El mínimo global de la función $C(\mu_{G})$ se alcanza en $\mu_{G}^{*}=\pi$, y
     
 \end{frame}
 
-    \begin{frame}[allowframebreaks, noframenumbering]{Referencias}
-        \footnotesize{
-            \begin{thebibliography}{99}
-    
-                \bibitem[Anderson, 1982]{Anderson1982} Anderson, B. D. O. (1982).
-                \newblock Reverse-time diffusion equation models.
-                \newblock \emph{Stochastic Processes and their Applications}, 12(3):313–326.
-    
-                \bibitem[Balaji et al., 2022]{Balaji2022} Balaji, Y., et al. (2022).
-                \newblock ediffi: Text-to-image diffusion models with an ensemble of expert denoisers.
-                \newblock \emph{arXiv preprint arXiv:2211.01324}.
-    
-                \bibitem[Bakry et al., 2014]{Bakry2014} Bakry, D., Gentil, I., Ledoux, M., et al. (2014).
-                \newblock Analysis and geometry of Markov diffusion operators.
-                \newblock \emph{Springer}, volume 103.
-    
-                \bibitem[Cattiaux et al., 2021]{Cattiaux2021} Cattiaux, P., Conforti, G., Gentil, I., \& Léonard, C. (2021).
-                \newblock Time reversal of diffusion processes under a finite entropy condition.
-                \newblock \emph{arXiv preprint arXiv:2104.07708}.
-    
-                \bibitem[Chen et al., 2022]{Chen2022} Chen, S., Chewi, S., Li, J., Li, Y., Salim, A., \& Zhang, A. R. (2022).
-                \newblock Sampling is as easy as learning the score: theory for diffusion models with minimal data assumptions.
-                \newblock \emph{arXiv preprint arXiv:2209.11215}.
-    
-                \bibitem[Chen et al., 2023]{Chen2023} Chen, M., Huang, K., Zhao, T., \& Wang, M. (2023).
-                \newblock Score approximation, estimation and distribution recovery of diffusion models on low-dimensional data.
-                \newblock \emph{arXiv preprint arXiv:2302.07194}.
-    
-                \bibitem[Dalalyan, 2017]{Dalalyan2017} Dalalyan, A. S. (2017).
-                \newblock Theoretical guarantees for approximate sampling from smooth and log-concave densities.
-                \newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical Methodology)}, 79(3):651–676.
-    
-                \bibitem[De Bortoli et al., 2021a]{DeBortoli2021a} De Bortoli, V., Doucet, A., Heng, J., \& Thornton, J. (2021a).
-                \newblock Simulating diffusion bridges with score matching.
-                \newblock \emph{arXiv preprint arXiv:2111.07243}.
-    
-                \bibitem[De Bortoli et al., 2021b]{DeBortoli2021b} De Bortoli, V., Thornton, J., Heng, J., \& Doucet, A. (2021b).
-                \newblock Diffusion schrödinger bridge with applications to score-based generative modeling.
-                \newblock \emph{Advances in Neural Information Processing Systems}, 34.
-    
-                \bibitem[De Bortoli, 2022]{DeBortoli2022} De Bortoli, V. (2022).
-                \newblock Convergence of denoising diffusion models under the manifold hypothesis.
-                \newblock \emph{arXiv preprint arXiv:2208.05314}.
-    
-                \bibitem[Dhariwal \& Nichol, 2021]{DhariwalNichol2021} Dhariwal, P., \& Nichol, A. (2021).
-                \newblock Diffusion models beat gans on image synthesis.
-                \newblock \emph{Advances in Neural Information Processing Systems}, 34.
-    
-                \bibitem[Durham \& Gallant, 2002]{DurhamGallant2002} Durham, G. B., \& Gallant, A. R. (2002).
-                \newblock Numerical techniques for maximum likelihood estimation of continuous-time diffusion processes.
-                \newblock \emph{Journal of Business \& Economic Statistics}, 20(3):297–338.
-    
-                \bibitem[Durmus \& Moulines, 2017]{DurmusMoulines2017} Durmus, A., \& Moulines, É. (2017).
-                \newblock Nonasymptotic convergence analysis for the unadjusted Langevin algorithm.
-                \newblock \emph{Annals of Applied Probability}, 27(3):1551–1587.
-    
-                \bibitem[Efron, 2011]{Efron2011} Efron, B. (2011).
-                \newblock Tweedie's formula and selection bias.
-                \newblock \emph{Journal of the American Statistical Association}, 106(496):1602–1614.
-                
-                \bibitem[Gao et al., 2020]{Gao2020} Gao, R., Song, Y., Poole, B., Wu, Y. N., \& Kingma, D. P. (2020).
-                \newblock Learning energy-based models by diffusion recovery likelihood.
-                \newblock \emph{arXiv preprint arXiv:2012.08125}.
-                
-                \bibitem[Haussmann \& Pardoux, 1986]{HaussmannPardoux1986} Haussmann, U. G., \& Pardoux, E. (1986).
-                \newblock Time reversal of diffusions.
-                \newblock \emph{The Annals of Probability}, pages 1188–1205.
-                
-                \bibitem[Ho et al., 2020]{Ho2020} Ho, J., Jain, A., \& Abbeel, P. (2020).
-                \newblock Denoising diffusion probabilistic models.
-                \newblock \emph{Advances in Neural Information Processing Systems}, 33:6840–6851.
-    
-                \bibitem[Ho \& Salimans, 2021]{HoSalimans2021} Ho, J., \& Salimans, T. (2021).
-                \newblock Classifier-free diffusion guidance.
-                \newblock \emph{NeurIPS 2021 Workshop on Deep Generative Models and Downstream Applications}.
-    
-                \bibitem[Huang et al., 2021]{Huang2021} Huang, C.-W., Lim, J. H., \& Courville, A. C. (2021).
-                \newblock A variational perspective on diffusion-based generative models and score matching.
-                \newblock \emph{Advances in Neural Information Processing Systems}, 34.
-    
-                \bibitem[Hyvärinen, 2005]{Hyvarinen2005} Hyvärinen, A. (2005).
-                \newblock Estimation of non-normalized statistical models by score matching.
-                \newblock \emph{Journal of Machine Learning Research}, 6(4).
-    
-                \bibitem[Ikeda \& Watanabe, 2014]{IkedaWatanabe2014} Ikeda, N., \& Watanabe, S. (2014).
-                \newblock Stochastic differential equations and diffusion processes.
-                \newblock \emph{Elsevier}.
-                
-                \bibitem[Karras et al., 2022]{Karras2022} Karras, T., Aittala, M., Aila, T., \& Laine, S. (2022).
-                \newblock Elucidating the design space of diffusion-based generative models.
-                \newblock \emph{arXiv preprint arXiv:2206.00364}.
-    
-                \bibitem[Lee et al., 2022]{Lee2022} Lee, H., Lu, J., \& Tan, Y. (2022).
-                \newblock Convergence for score-based generative modeling with polynomial complexity.
-                \newblock \emph{arXiv preprint arXiv:2206.06227}.
-    
-                \bibitem[Luhman \& Luhman, 2021]{Luhman2021} Luhman, E. \& Luhman, T. (2021).
-                \newblock Knowledge distillation in iterative generative models for improved sampling speed.
-                \newblock \emph{arXiv preprint arXiv:2101.02388}.
-                
-                \bibitem[Meng et al., 2022]{Meng2022} Meng, C., Gao, R., Kingma, D. P., Ermon, S., Ho, J. \& Salimans, T. (2022).
-                \newblock On distillation of guided diffusion models.
-                \newblock \emph{arXiv preprint arXiv:2210.03142}.
-                
-                \bibitem[Nichol \& Dhariwal, 2021]{NicholDhariwal2021} Nichol, A. Q., \& Dhariwal, P. (2021).
-                \newblock Improved denoising diffusion probabilistic models.
-                \newblock \emph{International Conference on Machine Learning}, pages 8162–8171. PMLR.
-    
-                \bibitem[Pidstrigach, 2022]{Pidstrigach2022} Pidstrigach, J. (2022).
-                \newblock Score-based generative models detect manifolds.
-                \newblock \emph{arXiv preprint arXiv:2206.01018}.
-    
-                \bibitem[Poole et al., 2022]{Poole2022} Poole, B., Jain, A., Barron, J. T., \& Mildenhall, B. (2022).
-                \newblock Dreamfusion: Text-to-3d using 2d diffusion.
-                \newblock \emph{arXiv preprint arXiv:2209.14988}.
-    
-                \bibitem[Radford et al., 2021]{Radford2021} Radford, A., et al. (2021).
-                \newblock Learning transferable visual models from natural language supervision.
-                \newblock \emph{International conference on machine learning}, pages 8748–8763. PMLR.
-    
-                \bibitem[Ramesh et al., 2022]{Ramesh2022} Ramesh, A., Dhariwal, P., Nichol, A., Chu, C., \& Chen, M. (2022).
-                \newblock Hierarchical text-conditional image generation with clip latents.
-                \newblock \emph{arXiv preprint arXiv:2204.06125}.
-    
-                \bibitem[Rombach et al., 2022]{Rombach2022} Rombach, R., Blattmann, A., Lorenz, D., Esser, P., \& Ommer, B. (2022).
-                \newblock High-resolution image synthesis with latent diffusion models.
-                \newblock \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 10684–10695.
-    
-                \bibitem[Saharia et al., 2022]{Saharia2022} Saharia, C., et al. (2022).
-                \newblock Photorealistic text-to-image diffusion models with deep language understanding.
-                \newblock \emph{arXiv preprint arXiv:2205.11487}.
-    
-                \bibitem[Salimans \& Ho, 2022]{SalimansHo2022} Salimans, T. \& Ho, J. (2022).
-                \newblock Progressive distillation for fast sampling of diffusion models.
-                \newblock \emph{arXiv preprint arXiv:2202.00512}.
-                
-                \bibitem[Sohl-Dickstein et al., 2015]{Sohl-Dickstein2015} Sohl-Dickstein, J., Weiss, E., Maheswaranathan, N., \& Ganguli, S. (2015).
-                \newblock Deep unsupervised learning using nonequilibrium thermodynamics.
-                \newblock \emph{International Conference on Machine Learning}, pages 2256–2265. PMLR.
-    
-                \bibitem[Song \& Ermon, 2019]{SongErmon2019} Song, Y., \& Ermon, S. (2019).
-                \newblock Generative modeling by estimating gradients of the data distribution.
-                \newblock \emph{Advances in Neural Information Processing Systems}, 32.
-    
-                \bibitem[Song \& Ermon, 2020]{SongErmon2020} Song, Y., \& Ermon, S. (2020).
-                \newblock Improved techniques for training score-based generative models.
-                \newblock \emph{Advances in neural information processing systems}, 33:12438–12448.
-    
-                \bibitem[Song et al., 2020a]{Song2020a} Song, J., Meng, C., \& Ermon, S. (2020a).
-                \newblock Denoising diffusion implicit models.
-                \newblock \emph{arXiv preprint arXiv:2010.02502}.
-    
-                \bibitem[Song et al., 2020b]{Song2020b} Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., \& Poole, B. (2020b).
-                \newblock Score-based generative modeling through stochastic differential equations.
-                \newblock \emph{arXiv preprint arXiv:2011.13456}.
-    
-                \bibitem[Song et al., 2021]{Song2021} Song, Y., Durkan, C., Murray, I., \& Ermon, S. (2021).
-                \newblock Maximum likelihood training of score-based diffusion models.
-                \newblock \emph{Advances in Neural Information Processing Systems}, 34.
-                
-                \bibitem[Stroock \& Varadhan, 1997]{StroockVaradhan1997} Stroock, D. W. \& Varadhan, S. R. S. (1997).
-                \newblock Multidimensional diffusion processes.
-                \newblock \emph{Springer Science \& Business Media}, volume 233.
-    
-                \bibitem[Vincent, 2011]{Vincent2011} Vincent, P. (2011).
-                \newblock A connection between score matching and denoising autoencoders.
-                \newblock \emph{Neural Computation}, 23(7):1661–1674.
-                
-                \bibitem[Watson et al., 2021]{Watson2021} Watson, D., Ho, J., Norouzi, M., \& Chan, W. (2021).
-                \newblock Learning to efficiently sample from diffusion probabilistic models.
-                \newblock \emph{arXiv preprint arXiv:2106.03802}.
-    
-                \bibitem[Xiao et al., 2021]{Xiao2021} Xiao, Z., Kreis, K., \& Vahdat, A. (2021).
-                \newblock Tackling the generative learning trilemma with denoising diffusion gans.
-                \newblock \emph{arXiv preprint arXiv:2112.07804}.
-    
-%             \bibitem[Raissi et al., 2019]{Raissi2019} Raissi et al. (2019)
-%             \newblock Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations
-%             \newblock \emph{Journal of Computational Physics}, Volume 378, Pages 686-707.
+\begin{frame}[allowframebreaks, noframenumbering]{Referencias}
+    \footnotesize{
+        \begin{thebibliography}{99}
 
-%             \bibitem[Hillebrecht, Unger, 2021]{HillebrechtUnger2021} Hillebrecht, Unger (2021)
-%             \newblock Learning nonlinear Certified machine learning: A posteriori error estimation for physics-informed neural networks.
-%             \newblock \emph{2022 International Joint Conference on Neural Networks (IJCNN)}.
+            \bibitem[Anderson, 1982]{Anderson1982} Anderson, B. D. O. (1982).
+            \newblock Reverse-time diffusion equation models.
+            \newblock \emph{Stochastic Processes and their Applications}, 12(3):313–326.
             
-%             \bibitem[Lu, 2021]{Lu2021} Lu et al. (2007)
-%             \newblock Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators.
-%             \newblock \emph{Nature Machine Intelligence}, volume 3, pages 218–229.
+            \bibitem[Arjovsky et al., 2017]{Arjovsky2017} Arjovsky, M., Chintala, S., \& Bottou, L. (2017).
+            \newblock Wasserstein generative adversarial networks.
+            \newblock \emph{Proceedings of the 34th International Conference on Machine Learning}, PMLR, 70, 214-223.
 
-%             \bibitem[Chen, Chen, 1995]{ChenChen1995}  Chen, Chen (1995)
-%             \newblock Universal approximation to nonlinear operators by neural networks with arbitrary
-% activation functions and its application to dynamical systems. 
-%             \newblock {IEEE Transactions on Neural Networks},
-% 6(4):911–917.
+            \bibitem[Bakry et al., 2014]{Bakry2014} Bakry, D., Gentil, I., Ledoux, M., et al. (2014).
+            \newblock Analysis and geometry of Markov diffusion operators.
+            \newblock \emph{Springer}, volume 103.
 
-%             \bibitem[Goofellow et al. 2020]{Goodfellow2020}  Goodfellow et al. (2020)
-%             \newblock Generative adversarial networks. 
-%             \newblock \emph{Association for Computing Machinery}.
+            \bibitem[Balaji et al., 2022]{Balaji2022} Balaji, Y., et al. (2022).
+            \newblock ediffi: Text-to-image diffusion models with an ensemble of expert denoisers.
+            \newblock \emph{arXiv preprint arXiv:2211.01324}.
 
-%             \bibitem[Mishra, Molinaro, 2022]{MishraMolinaro2022} 
-%             Mishra, Molinaro (2022)
-%             \newblock Estimates on the generalization error of physics-informed neural networks for approximating a class of inverse problems for PDEs.
-%             \newblock \emph{ IMA Journal of Numerical Analysis}, Volume 42, Issue 2, Pages 981–1022.
+            \bibitem[Brock et al., 2019]{Brock2019} Brock, A., Donahue, J., \& Simonyan, K. (2019).
+            \newblock Large Scale GAN Training for High Fidelity Natural Image Synthesis.
+            \newblock \emph{International Conference on Learning Representations (ICLR) 2019}.
+
+            \bibitem[Cattiaux et al., 2021]{Cattiaux2021} Cattiaux, P., Conforti, G., Gentil, I., \& Léonard, C. (2021).
+            \newblock Time reversal of diffusion processes under a finite entropy condition.
+            \newblock \emph{arXiv preprint arXiv:2104.07708}.
+
+            \bibitem[Chen et al., 2022]{Chen2022} Chen, S., Chewi, S., Li, J., Li, Y., Salim, A., \& Zhang, A. R. (2022).
+            \newblock Sampling is as easy as learning the score: theory for diffusion models with minimal data assumptions.
+            \newblock \emph{arXiv preprint arXiv:2209.11215}.
+
+            \bibitem[Chen et al., 2023]{Chen2023} Chen, M., Huang, K., Zhao, T., \& Wang, M. (2023).
+            \newblock Score approximation, estimation and distribution recovery of diffusion models on low-dimensional data.
+            \newblock \emph{arXiv preprint arXiv:2302.07194}.
+
+            \bibitem[Dalalyan, 2017]{Dalalyan2017} Dalalyan, A. S. (2017).
+            \newblock Theoretical guarantees for approximate sampling from smooth and log-concave densities.
+            \newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical Methodology)}, 79(3):651–676.
+
+            \bibitem[De Bortoli, 2022]{DeBortoli2022} De Bortoli, V. (2022).
+            \newblock Convergence of denoising diffusion models under the manifold hypothesis.
+            \newblock \emph{arXiv preprint arXiv:2208.05314}.
+
+            \bibitem[De Bortoli et al., 2021a]{DeBortoli2021a} De Bortoli, V., Doucet, A., Heng, J., \& Thornton, J. (2021a).
+            \newblock Simulating diffusion bridges with score matching.
+            \newblock \emph{arXiv preprint arXiv:2111.07243}.
+
+            \bibitem[De Bortoli et al., 2021b]{DeBortoli2021b} De Bortoli, V., Thornton, J., Heng, J., \& Doucet, A. (2021b).
+            \newblock Diffusion schrödinger bridge with applications to score-based generative modeling.
+            \newblock \emph{Advances in Neural Information Processing Systems}, 34.
+
+            \bibitem[Dhariwal \& Nichol, 2021]{DhariwalNichol2021} Dhariwal, P., \& Nichol, A. (2021).
+            \newblock Diffusion models beat gans on image synthesis.
+            \newblock \emph{Advances in Neural Information Processing Systems}, 34.
+
+            \bibitem[Durham \& Gallant, 2002]{DurhamGallant2002} Durham, G. B., \& Gallant, A. R. (2022).
+            \newblock Numerical techniques for maximum likelihood estimation of continuous-time diffusion processes.
+            \newblock \emph{Journal of Business \& Economic Statistics}, 20(3):297–338.
+
+            \bibitem[Durmus \& Moulines, 2017]{DurmusMoulines2017} Durmus, A., \& Moulines, É. (2017).
+            \newblock Nonasymptotic convergence analysis for the unadjusted Langevin algorithm.
+            \newblock \emph{Annals of Applied Probability}, 27(3):1551–1587.
+
+            \bibitem[Efron, 2011]{Efron2011} Efron, B. (2011).
+            \newblock Tweedie's formula and selection bias.
+            \newblock \emph{Journal of the American Statistical Association}, 106(496):1602–1614.
+            
+            \bibitem[Gao et al., 2020]{Gao2020} Gao, R., Song, Y., Poole, B., Wu, Y. N., \& Kingma, D. P. (2020).
+            \newblock Learning energy-based models by diffusion recovery likelihood.
+            \newblock \emph{arXiv preprint arXiv:2012.08125}.
+            
+            \bibitem[Goodfellow et al., 2014]{Goodfellow2014} Goodfellow, I., et al. (2014).
+            \newblock Generative Adversarial Networks.
+            \newblock \emph{Advances in Neural Information Processing Systems 27 (NIPS 2014)}.
+
+            \bibitem[Google, 2024a]{GoogleGAN} Google. (2024a).
+            \newblock Overview of GAN Structure.
+            \newblock \emph{Machine Learning - Google for Developers}. Accedido 10-05-2024. Dirección: \url{https://developers.google.com/machine-learning/gan/gan_structure}
+
+            \bibitem[Gulrajani et al., 2017]{Gulrajani2017} Gulrajani, I., Ahmed, F., Arjovsky, M., Dumoulin, V., \& Courville, A. (2017).
+            \newblock Improved Training of Wasserstein GANs.
+            \newblock \emph{Advances in Neural Information Processing Systems 30 (NIPS 2017)}.
+
+            \bibitem[Haussmann \& Pardoux, 1986]{HaussmannPardoux1986} Haussmann, U. G., \& Pardoux, E. (1986).
+            \newblock Time reversal of diffusions.
+            \newblock \emph{The Annals of Probability}, pages 1188–1205.
+            
+            \bibitem[Heusel et al., 2017]{Heusel2017} Heusel, M., Ramsauer, H., Unterthiner, T., Nessler, B., \& Hochreiter, S. (2017).
+            \newblock GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium.
+            \newblock \emph{Neural Information Processing Systems (NIPS)}.
+
+            \bibitem[Ho \& Salimans, 2021]{HoSalimans2021} Ho, J., \& Salimans, T. (2021).
+            \newblock Classifier-free diffusion guidance.
+            \newblock \emph{NeurIPS 2021 Workshop on Deep Generative Models and Downstream Applications}.
+
+            \bibitem[Ho et al., 2020]{Ho2020} Ho, J., Jain, A., \& Abbeel, P. (2020).
+            \newblock Denoising diffusion probabilistic models.
+            \newblock \emph{Advances in Neural Information Processing Systems}, 33:6840–6851.
+
+            \bibitem[Huang et al., 2021]{Huang2021} Huang, C.-W., Lim, J. H., \& Courville, A. C. (2021).
+            \newblock A variational perspective on diffusion-based generative models and score matching.
+            \newblock \emph{Advances in Neural Information Processing Systems}, 34.
+
+            \bibitem[Hyvärinen, 2005]{Hyvarinen2005} Hyvärinen, A. (2005).
+            \newblock Estimation of non-normalized statistical models by score matching.
+            \newblock \emph{Journal of Machine Learning Research}, 6(4).
+
+            \bibitem[Ikeda \& Watanabe, 2014]{IkedaWatanabe2014} Ikeda, N., \& Watanabe, S. (2014).
+            \newblock Stochastic differential equations and diffusion processes.
+            \newblock \emph{Elsevier}.
+            
+            \bibitem[Isola et al., 2016]{Isola2016} Isola, P., Zhu, J.-Y., Zhou, T., \& Efros, A. A. (2016).
+            \newblock Image-to-Image Translation with Conditional Adversarial Networks.
+            \newblock \emph{IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2017}.
+
+            \bibitem[Karras et al., 2017]{Karras2017} Karras, T., Aila, T., Laine, S., \& Lehtinen, J. (2017).
+            \newblock Progressive Growing of GANs for Improved Quality, Stability, and Variation.
+            \newblock \emph{International Conference on Learning Representations (ICLR) 2018}.
+
+            \bibitem[Karras et al., 2019]{Karras2019} Karras, T., Laine, S., \& Aila, T. (2019).
+            \newblock A Style-Based Generator Architecture for Generative Adversarial Networks.
+            \newblock \emph{IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2019}.
+
+            \bibitem[Karras et al., 2022]{Karras2022} Karras, T., Aittala, M., Aila, T., \& Laine, S. (2022).
+            \newblock Elucidating the design space of diffusion-based generative models.
+            \newblock \emph{arXiv preprint arXiv:2206.00364}.
+
+            \bibitem[Lee et al., 2022]{Lee2022} Lee, H., Lu, J., \& Tan, Y. (2022).
+            \newblock Convergence for score-based generative modeling with polynomial complexity.
+            \newblock \emph{arXiv preprint arXiv:2206.06227}.
+
+            \bibitem[Luhman \& Luhman, 2021]{Luhman2021} Luhman, E. \& Luhman, T. (2021).
+            \newblock Knowledge distillation in iterative generative models for improved sampling speed.
+            \newblock \emph{arXiv preprint arXiv:2101.02388}.
+            
+            \bibitem[Meng et al., 2022]{Meng2022} Meng, C., Gao, R., Kingma, D. P., Ermon, S., Ho, J. \& Salimans, T. (2022).
+            \newblock On distillation of guided diffusion models.
+            \newblock \emph{arXiv preprint arXiv:2210.03142}.
+
+            \bibitem[Muñoz López, 2024]{MunozLopez2024} Muñoz López, F. I. (2024).
+            \newblock \emph{Cálculo del baricentro de Wasserstein bayesiano en conjuntos de imágenes mediante el descenso del gradiente estocástico}.
+            \newblock Memoria para optar al título de Ingeniero Civil Matemático, Universidad de Chile.
+
+            \bibitem[Nichol \& Dhariwal, 2021]{NicholDhariwal2021} Nichol, A. Q., \& Dhariwal, P. (2021).
+            \newblock Improved denoising diffusion probabilistic models.
+            \newblock \emph{International Conference on Machine Learning}, pages 8162–8171. PMLR.
+
+            \bibitem[Pidstrigach, 2022]{Pidstrigach2022} Pidstrigach, J. (2022).
+            \newblock Score-based generative models detect manifolds.
+            \newblock \emph{arXiv preprint arXiv:2206.01018}.
+
+            \bibitem[Poole et al., 2022]{Poole2022} Poole, B., Jain, A., Barron, J. T., \& Mildenhall, B. (2022).
+            \newblock Dreamfusion: Text-to-3d using 2d diffusion.
+            \newblock \emph{arXiv preprint arXiv:2209.14988}.
+
+            \bibitem[Radford et al., 2015]{Radford2015} Radford, A., Metz, L., \& Chintala, S. (2015).
+            \newblock Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks.
+            \newblock \emph{International Conference on Learning Representations (ICLR) 2016}.
+
+            \bibitem[Radford et al., 2021]{Radford2021} Radford, A., et al. (2021).
+            \newblock Learning transferable visual models from natural language supervision.
+            \newblock \emph{International conference on machine learning}, pages 8748–8763. PMLR.
+
+            \bibitem[Ramesh et al., 2022]{Ramesh2022} Ramesh, A., Dhariwal, P., Nichol, A., Chu, C., \& Chen, M. (2022).
+            \newblock Hierarchical text-conditional image generation with clip latents.
+            \newblock \emph{arXiv preprint arXiv:2204.06125}.
+
+            \bibitem[Rombach et al., 2022]{Rombach2022} Rombach, R., Blattmann, A., Lorenz, D., Esser, P., \& Ommer, B. (2022).
+            \newblock High-resolution image synthesis with latent diffusion models.
+            \newblock \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 10684–10695.
+            
+            \bibitem[Saharia et al., 2022]{Saharia2022} Saharia, C., et al. (2022).
+            \newblock Photorealistic text-to-image diffusion models with deep language understanding.
+            \newblock \emph{arXiv preprint arXiv:2205.11487}.
+
+            \bibitem[Salimans et al., 2016]{Salimans2016} Salimans, T., et al. (2016).
+            \newblock Improved Techniques for Training GANs.
+            \newblock \emph{Advances in Neural Information Processing Systems 29 (NIPS 2016)}.
+            
+            \bibitem[Salimans \& Ho, 2022]{SalimansHo2022} Salimans, T. \& Ho, J. (2022).
+            \newblock Progressive distillation for fast sampling of diffusion models.
+            \newblock \emph{arXiv preprint arXiv:2202.00512}.
+            
+            \bibitem[San Martín-Arastegui, 2018]{SanMartin2018} San Martín-Arastegui, J. (2018).
+            \newblock \emph{Teoría de la Medida}, 1.ª ed.
+            \newblock Editorial Universitaria. ISBN: 978-956-11-2577-3.
+
+            \bibitem[Santana, 2017]{Santana2017} Santana, C. (2017).
+            \newblock Creando Caras Artificiales Con Gans mejoradas: Data Coffee \#4.
+            \newblock Accedido 10-01-2024. Dirección: \url{https://youtu.be/bMDpMRB7CEs?si=JtMHA9kZ3uKrK14T&t=272}
+
+            \bibitem[Sohl-Dickstein et al., 2015]{Sohl-Dickstein2015} Sohl-Dickstein, J., Weiss, E., Maheswaranathan, N., \& Ganguli, S. (2015).
+            \newblock Deep unsupervised learning using nonequilibrium thermodynamics.
+            \newblock \emph{International Conference on Machine Learning}, pages 2256–2265. PMLR.
+
+            \bibitem[Song \& Ermon, 2019]{SongErmon2019} Song, Y., \& Ermon, S. (2019).
+            \newblock Generative modeling by estimating gradients of the data distribution.
+            \newblock \emph{Advances in Neural Information Processing Systems}, 32.
+
+            \bibitem[Song \& Ermon, 2020]{SongErmon2020} Song, Y., \& Ermon, S. (2020).
+            \newblock Improved techniques for training score-based generative models.
+            \newblock \emph{Advances in neural information processing systems}, 33:12438–12448.
+
+            \bibitem[Song et al., 2020a]{Song2020a} Song, J., Meng, C., \& Ermon, S. (2020a).
+            \newblock Denoising diffusion implicit models.
+            \newblock \emph{arXiv preprint arXiv:2010.02502}.
+
+            \bibitem[Song et al., 2020b]{Song2020b} Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., \& Poole, B. (2020b).
+            \newblock Score-based generative modeling through stochastic differential equations.
+            \newblock \emph{arXiv preprint arXiv:2011.13456}.
+
+            \bibitem[Song et al., 2021]{Song2021} Song, Y., Durkan, C., Murray, I., \& Ermon, S. (2021).
+            \newblock Maximum likelihood training of score-based diffusion models.
+            \newblock \emph{Advances in Neural Information Processing Systems}, 34.
+            
+            \bibitem[Stroock \& Varadhan, 1997]{StroockVaradhan1997} Stroock, D. W. \& Varadhan, S. R. S. (1997).
+            \newblock Multidimensional diffusion processes.
+            \newblock \emph{Springer Science \& Business Media}, volume 233.
+
+            \bibitem[Vincent, 2011]{Vincent2011} Vincent, P. (2011).
+            \newblock A connection between score matching and denoising autoencoders.
+            \newblock \emph{Neural Computation}, 23(7):1661–1674.
+
+            \bibitem[Wang et al., 2018]{Wang2018} Wang, X., Yu, K., Wu, S., Gu, J., Liu, Y., Dong, C., Qiao, Y., \& Loy, C. C. (2018).
+            \newblock ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks.
+            \newblock \emph{European Conference on Computer Vision (ECCV)}.
+
+            \bibitem[Watson et al., 2021]{Watson2021} Watson, D., Ho, J., Norouzi, M., \& Chan, W. (2021).
+            \newblock Learning to efficiently sample from diffusion probabilistic models.
+            \newblock \emph{arXiv preprint arXiv:2106.03802}.
+
+            \bibitem[Wikipedia, 2024b]{WikipediaGAN} Wikipedia. (2024b).
+            \newblock Generative adversarial network - Wikipedia.
+            \newblock Accedido 09-05-2024. Dirección: \url{https://en.wikipedia.org/wiki/Generative_adversarial_network}
+
+            \bibitem[Xiao et al., 2021]{Xiao2021} Xiao, Z., Kreis, K., \& Vahdat, A. (2021).
+            \newblock Tackling the generative learning trilemma with denoising diffusion gans.
+            \newblock \emph{arXiv preprint arXiv:2112.07804}.
+            
+            \bibitem[Zhu et al., 2017]{Zhu2017} Zhu, J.-Y., Park, T., Isola, P., \& Efros, A. A. (2017).
+            \newblock Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks.
+            \newblock \emph{International Conference on Computer Vision (ICCV) 2017}.
+
         \end{thebibliography}
     }
 \end{frame}
